@@ -43,6 +43,7 @@ export default function TrendsMap({ trendsData }) {
           </Popup>
         </Marker>
       ))}
+    </MapContainer>
     </div>
   );
 }
