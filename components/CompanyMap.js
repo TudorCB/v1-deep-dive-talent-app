@@ -1,7 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
-import LeafletMap from './LeafletMap'
 export default function CompanyMap({ companyData }) {
   const [mapData, setMapData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -29,7 +28,6 @@ export default function CompanyMap({ companyData }) {
   if (typeof window !== 'undefined') {
     return (
       <div style={{ width: '100px', height: '100px' }}>
-      <LeafletMap/>
       {/* <Map center={[37.7749, -122.4194]} zoom={12}>
       //   <TileLayer
       //     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -44,7 +42,7 @@ export default function CompanyMap({ companyData }) {
       //       </Popup>
       //     </Marker>
       //   ))}
-      // </Map> */}
+      // </Map>
       </div>
     );
   } else {
