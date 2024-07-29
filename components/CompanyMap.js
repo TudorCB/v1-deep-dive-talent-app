@@ -28,21 +28,21 @@ export default function CompanyMap({ companyData }) {
   if (typeof window !== 'undefined') {
     return (
       <div style={{ width: '100px', height: '100px' }}>
-      {/* <Map center={[37.7749, -122.4194]} zoom={12}>
-      //   <TileLayer
-      //     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      //     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-      //   />
-      //   {mapData.map((location, index) => (
-      //     <Marker key={index} position={[location.latitude, location.longitude]}>
-      //       <Popup>
-      //         <div>
-      //           <h3>{location.name}</h3>
-      //         </div>
-      //       </Popup>
-      //     </Marker>
-      //   ))}
-      // </Map>
+      <Map center={[37.7749, -122.4194]} zoom={12}>
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        />
+        {mapData.map((location, index) => (
+          <Marker key={index} position={[location.latitude, location.longitude]}>
+            <Popup>
+              <div>
+                <h3>{location.name}</h3>
+              </div>
+            </Popup>
+          </Marker>
+        ))}
+      </Map>
       </div>
     );
   } else {
