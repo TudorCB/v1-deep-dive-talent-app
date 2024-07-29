@@ -16,28 +16,24 @@ export default function TalentMap() {
       });
   }, []);
 
-  if (typeof window !== 'undefined') {
-    return (
-      <div style={{ width: '80vw', height: '60vh', border: '1px solid #ccc', borderRadius: '5px' }}>
-      <MapContainer center={[37.7749, -122.4194]} zoom={12} scrollWheelZoom={true}>
-        <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        />
-        {talentData.map((talent, index) => (
-          <Marker key={index} position={[talent.latitude, talent.longitude]}>
-            <Popup>
-              <div>
-                <h3>{talent.name}</h3>
-                <p>{talent.skillset}</p>
-              </div>
-            </Popup>
-          </Marker>
-        ))}
-      </MapContainer>
-      </div>
-    );
-  } else {
-    return null;
-  }
+  return (
+    <div style={{ width: '80vw', height: '60vh', border: '1px solid #ccc', borderRadius: '5px' }}>
+    <MapContainer center={[37.7749, -122.4194]} zoom={12} scrollWheelZoom={true}>
+      <TileLayer
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+      />
+      {talentData.map((talent, index) => (
+        <Marker key={index} position={[talent.latitude, talent.longitude]}>
+          <Popup>
+            <div>
+              <h3>{talent.name}</h3>
+              <p>{talent.skillset}</p>
+            </div>
+          </Popup>
+        </Marker>
+      ))}
+    </MapContainer>
+    </div>
+  );
 }
