@@ -32,7 +32,7 @@ export default function TalentMap() {
             </Popup>
           </Marker>
         ))}
-      </Map>
+      </MapContainer>
     );
   } else {
     return null;
