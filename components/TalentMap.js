@@ -17,7 +17,7 @@ export default function TalentMap() {
 
   if (typeof window !== 'undefined') {
     return (
-      <Map center={[37.7749, -122.4194]} zoom={12}>
+      <MapContainer center={[37.7749, -122.4194]} zoom={12}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
