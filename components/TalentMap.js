@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
 
 export default function TalentMap() {
   const [talentData, setTalentData] = useState([]);
@@ -17,8 +18,8 @@ export default function TalentMap() {
 
   if (typeof window !== 'undefined') {
     return (
-      <div style={{ width: '100px', height: '100px' }}>
-      <MapContainer center={[37.7749, -122.4194]} zoom={12}>
+      <div style={{ width: '80vw', height: '60vh', border: '1px solid #ccc', borderRadius: '5px' }}>
+      <MapContainer center={[37.7749, -122.4194]} zoom={12} scrollWheelZoom={true}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
