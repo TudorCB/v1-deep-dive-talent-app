@@ -42,7 +42,7 @@ export default function CompanyMap({ companyData }) {
             </Popup>
           </Marker>
         ))}
-      </Map>
+      </MapContainer>
       </div>
     );
   } else {
