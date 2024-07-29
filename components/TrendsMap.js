@@ -28,23 +28,25 @@ export default function TrendsMap({ trendsData }) {
   if (error) return <p>Error: {error.message}</p>;
 
   return (
-    <div style={{ width: '100px', height: '100px' }}>
-    <div>Map</div>
-    {/* <Map center={[37.7749, -122.4194]} zoom={12}>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '50%', height: '60vh', marginTop: '20px', marginBottom: '20px' }}>
+    <MapContainer center={[37.7749, -122.4194]} zoom={12} scrollWheelZoom={true} style={{ height: "100%", width: "100%", border: '1px solid #ccc', borderRadius: '5px' }}>
+      <TileLayer
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+      />
     //   <TileLayer
     //     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     //     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     //   />
-    //   {mapData.map((location, index) => (
-    //     <Marker key={index} position={[location.latitude, location.longitude]}>
-    //       <Popup>
-    //         <div>
-    //           <h3>{location.name}</h3>
-    //         </div>
-    //       </Popup>
-    //     </Marker>
-    //   ))}
-    // </Map> */}
+      {mapData.map((location, index) => (
+        <Marker key={index} position={[location.latitude, location.longitude]}>
+          <Popup>
+            <div>
+              <h3>{location.name}</h3>
+            </div>
+          </Popup>
+        </Marker>
+      ))}
     </div>
   );
 }
