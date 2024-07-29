@@ -7,7 +7,7 @@ export default function TalentMap() {
   const [talentData, setTalentData] = useState([]);
 
   useEffect(() => {
-    axios.get('/api/talent/SanFrancisco/React')
+    axios.get('/api/talent/San Francisco/React Developers')
       .then(response => setTalentData(response.data))
       .catch(error => {
         console.error('Error fetching talent data:', error);
