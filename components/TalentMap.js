@@ -18,7 +18,7 @@ export default function TalentMap() {
 
   return (
     <div style={{ width: '80vw', height: '60vh', border: '1px solid #ccc', borderRadius: '5px' }}>
-    <MapContainer center={[37.7749, -122.4194]} zoom={12} scrollWheelZoom={true}>
+    <MapContainer center={[37.7749, -122.4194]} zoom={12} scrollWheelZoom={true} style={{ height: "100%", width: "100%" }}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
