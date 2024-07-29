@@ -27,8 +27,10 @@ export default function CompanyMap({ companyData }) {
   if (error) return <p>Error: {error.message}</p>;
 
   if (typeof window !== 'undefined') {
-    return (<LeafletMap/>
-      // <Map center={[37.7749, -122.4194]} zoom={12}>
+    return (
+      <div style={{ width: '100px', height: '100px' }}>
+      <LeafletMap/>
+      {/* <Map center={[37.7749, -122.4194]} zoom={12}>
       //   <TileLayer
       //     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       //     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -42,7 +44,8 @@ export default function CompanyMap({ companyData }) {
       //       </Popup>
       //     </Marker>
       //   ))}
-      // </Map>
+      // </Map> */}
+      </div>
     );
   } else {
     return null;

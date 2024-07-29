@@ -17,6 +17,7 @@ export default function TalentMap() {
 
   if (typeof window !== 'undefined') {
     return (
+      <div style={{ width: '100px', height: '100px' }}>
       <MapContainer center={[37.7749, -122.4194]} zoom={12}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -33,6 +34,7 @@ export default function TalentMap() {
           </Marker>
         ))}
       </MapContainer>
+      </div>
     );
   } else {
     return null;

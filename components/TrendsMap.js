@@ -27,8 +27,10 @@ export default function TrendsMap({ trendsData }) {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
-  return (<div>Map</div>
-    // <Map center={[37.7749, -122.4194]} zoom={12}>
+  return (
+    <div style={{ width: '100px', height: '100px' }}>
+    <div>Map</div>
+    {/* <Map center={[37.7749, -122.4194]} zoom={12}>
     //   <TileLayer
     //     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     //     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -42,6 +44,7 @@ export default function TrendsMap({ trendsData }) {
     //       </Popup>
     //     </Marker>
     //   ))}
-    // </Map>
+    // </Map> */}
+    </div>
   );
 }
