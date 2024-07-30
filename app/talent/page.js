@@ -15,8 +15,8 @@ export default function TalentPage() {
   const [talentData, setTalentData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const location = 'SanFrancisco'; // Example location
-  const skillset = 'React'; // Example skillset
+  const location = 'San Francisco'; // Example location
+  const skillset = 'React Developer'; // Example skillset
 
   const fetchData = async (url) => {
     try {
@@ -33,9 +33,9 @@ export default function TalentPage() {
     const fetchAllData = async () => {
       try {
         const [adjacentSkillsResponse, remotePropensityResponse, diversityInsightsResponse] = await Promise.all([
-          fetchData('/api/talent/SanFrancisco/React/adjacent_skills'),
-          fetchData('/api/talent/SanFrancisco/React/remote_propensity'),
-          fetchData('/api/talent/SanFrancisco/React/diversity_insights')
+          fetchData(`/api/talent/${location}/${skillset}/adjacent_skills`),
+          fetchData(`/api/talent/${location}/${skillset}/remote_propensity`),
+          fetchData(`/api/talent/${location}/${skillset}/diversity_insights`)
         ]);
 
         setTalentData({

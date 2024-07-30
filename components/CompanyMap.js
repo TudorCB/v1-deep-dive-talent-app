@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 export default function CompanyMap({ companyData }) {
   const [mapData, setMapData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -28,7 +28,7 @@ export default function CompanyMap({ companyData }) {
   if (typeof window !== 'undefined') {
     return (
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '50%', height: '60vh', marginTop: '20px', marginBottom: '20px' }}>
-      <MapContainer center={[37.7749, -122.4194]} zoom={12} scrollWheelZoom={true} style={{ height: "100%", width: "100%", border: '1px solid #ccc', borderRadius: '5px' }}>
+      {/* <MapContainer center={[37.7749, -122.4194]} zoom={12} scrollWheelZoom={true} style={{ height: "100%", width: "100%", border: '1px solid #ccc', borderRadius: '5px' }}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -42,7 +42,7 @@ export default function CompanyMap({ companyData }) {
             </Popup>
           </Marker>
         ))}
-      </MapContainer>
+      </MapContainer> */}
       </div>
     );
   } else {
